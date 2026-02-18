@@ -62,12 +62,68 @@ export default function Portfolio() {
   };
 
   const skills = {
-    languages: ['JavaScript', 'Java', 'Python', 'TypeScript', 'C++'],
-    frameworks: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'Spring Boot', 'React Native'],
-    tools: ['Git', 'Docker', 'VS Code', 'Postman', 'Android Studio'],
-    databases: ['MongoDB', 'MySQL', 'Firebase', 'PostgreSQL'],
-    cloud: ['AWS', 'Firebase', 'Vercel', 'Netlify']
+    languages: [
+      'Java',
+      'Python',
+      'C',
+      'C++',
+      'SQL',
+      'Dart',
+      'JavaScript',
+      // 'TypeScript'
+    ],
+
+    frontend: [
+      'Flutter',
+      'React Native',
+      'HTML',
+      'CSS',
+      'React.js',
+      'Next.js',
+      'Tailwind CSS',
+    ],
+
+    backend: [
+      'Firebase Authentication',
+      'REST APIs',
+      'Socket.IO',
+      'Node.js',
+      'Express.js',
+    ],
+
+    databases: [
+      'MongoDB',
+      'MySQL',
+      'Firestore',
+      // 'PostgreSQL'
+    ],
+
+    tools: [
+      'Git',
+      'GitHub',
+      'Docker',
+      'Postman',
+      'VS Code',
+      'Android Studio',
+      'Expo'
+    ],
+
+    cloud: [
+      'Firebase',
+      // 'AWS',
+      'Vercel',
+      'Netlify'
+    ],
+
+    concepts: [
+      'Data Structures',
+      'Performance Optimization',
+      'Scalable Architecture',
+      'API Integration',
+      'Cross-Platform Development',
+    ]
   };
+
 
   const projects = [
     {
@@ -928,34 +984,25 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
             <div className="space-y-4 sm:space-y-6 font-body text-base sm:text-lg leading-relaxed animate-fadeInUp delay-100">
               <p className={theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'}>
-                I don't just write code, I architect solutions. Every project is an opportunity
-                to solve a real problem, whether it's building real-time auction systems that
-                handle thousands of concurrent bids or creating AI tools that help people
-                prepare for their dream jobs.
+                I don’t just write code, I engineer solutions. Every project I take on is an opportunity to solve a real-world problem, whether it’s building real-time systems, developing scalable applications, or creating tools that improve user experiences.
               </p>
               <p className={theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'}>
-                My journey from MCA student to software developer wasn't about following a
-                playbook. It was about relentless building, learning from production failures,
-                and understanding that great software is as much about user experience as it
-                is about clean code.
+                My journey from an MCA student to a software developer was never about following a predefined path. It was shaped by continuous building, learning from challenges, and understanding that great software balances clean architecture with intuitive design.
               </p>
             </div>
 
             <div className="space-y-4 sm:space-y-6 font-body text-base sm:text-lg leading-relaxed animate-fadeInUp delay-200">
               <p className={theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'}>
-                What sets me apart? I move fast without breaking things. I've shipped
-                full-stack applications from concept to production, integrated payment
-                gateways, optimized database queries, and built systems that scale.
+                What sets me apart is my ability to execute. I’ve delivered full-stack applications from concept to production, integrated secure payment systems, optimized performance, and built applications with scalability in mind.
               </p>
               <p className={theme === 'dark' ? 'text-zinc-300' : 'text-zinc-700'}>
-                Today, I'm focused on creating products that people actually want to use—combining
-                technical excellence with genuine user empathy. Whether it's MERN stack, mobile
-                development, or exploring AI integrations, I adapt quickly and deliver results.
+                Today, I focus on developing products that people genuinely find valuable. By combining strong engineering principles with user-centric thinking, I work across modern technologies including the MERN stack, mobile development, and emerging AI solutions to deliver reliable and impactful software.
               </p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section id="skills" className={`py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 ${theme === 'dark' ? 'bg-[#0B0F1E]' : 'bg-white'
@@ -974,10 +1021,12 @@ export default function Portfolio() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               { title: 'Languages', items: skills.languages, icon: Code },
-              { title: 'Frameworks', items: skills.frameworks, icon: Code },
-              { title: 'Tools', items: skills.tools, icon: Wrench },
+              { title: 'Frontend', items: skills.frontend, icon: Code },
+              { title: 'Backend', items: skills.backend, icon: Code },
               { title: 'Databases', items: skills.databases, icon: Database },
-              { title: 'Cloud & DevOps', items: skills.cloud, icon: Cloud }
+              { title: 'Tools', items: skills.tools, icon: Wrench },
+              { title: 'Cloud & DevOps', items: skills.cloud, icon: Cloud },
+              { title: 'Concepts', items: skills.concepts, icon: Cloud }
             ].map((category, index) => (
               <div
                 key={category.title}
